@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports: ['4000:80']
+    volumes: 
+         - instagram-message-scraper:/app/src:nocopy # set nocopy
+
+volumes:
+  instagram-message-scraper:
+    external: true
